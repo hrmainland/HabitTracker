@@ -1,7 +1,9 @@
 from Pixela.api import add_datapoint, get_graph_definitions
 import sys
 from datetime import date, timedelta
-from Pixela.file_io import *
+# from Pixela.file_io import *
+
+UNIT_DICT = {"med": 30, "jrn": 10, "goal": 15, "web": 30}
 
 DAY_STRINGS = {"yest": -1, "yesterday": -1, "tod": 0, "today": 0}
 
@@ -51,7 +53,7 @@ def prompt_user(name_id_pairs):
 
 def parse_input(input, id_list):
 
-    file = File(UNIT_FILE)
+    # file = File(UNIT_FILE)
 
     if len(input) == 0:
         print("No Input Received")
@@ -81,7 +83,7 @@ def parse_input(input, id_list):
                 datapoints.append(current_datapoint)
 
             # now make a new datapoint
-            current_datapoint = Datapoint(elem, file.unit_dict)
+            current_datapoint = Datapoint(elem, UNIT_DICT)
             current_datapoint.date = day
         else:
             try:
