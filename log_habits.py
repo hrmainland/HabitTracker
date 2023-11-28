@@ -7,11 +7,11 @@ DAY_STRINGS = {"yest": -1, "yesterday": -1, "tod": 0, "today": 0}
 
 
 # example input
-# -2 med 3 run yesterday med read 2 tod run
+# -2 med 3 run yesterday med read 2 tod run 
 # This means
 # Two days ago: meditated 3 sessions, ran once
 # Yesterday: meditated and read once each
-# Today ran once
+# Today ran one time
 
 # or
 # read 2 run
