@@ -1,0 +1,6 @@
+shibafu (green),
+momiji (red)
+sora (blue)
+ichou (yellow)
+ajisai (purple)
+kuro (black)

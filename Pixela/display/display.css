@@ -1,0 +1,107 @@
+body {
+    height: 100vh;
+}
+
+.graphs {
+    max-height: 70%;
+}
+
+#graph-row {
+    max-height: 30%;
+}
+
+.graph-img {
+    max-height: 35vh;
+}
+
+.graph-section {
+    max-height: 50%;
+}
+
+.flipped {
+    display: none;
+}
+
+.flame {
+    height: 90%;
+    position: absolute;
+    left: 85%;
+    top: 15%;
+}
+
+.clicked {
+    border: 1px solid red;
+}
+
+.stats {
+    height: 90%;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+}
+
+.stats-side {
+    padding-top: 10px;
+}
+
+.nav-link {
+    padding: 12px 8px;
+}
+
+.habit-heading {
+    position: relative;
+}
+
+.animated {
+    animation-name: squash;
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes squash {
+
+    0%,
+    100% {
+        transition-time-function: ease-in;
+        transform-origin: 50% 100%;
+    }
+
+    0% {
+        transform: translate(0%, -2%) scaleX(1.70) scaleY(0.30);
+
+    }
+
+    26% {
+        transform: translate(0%, 2%) scaleX(1.80) scaleY(0.20);
+
+    }
+
+    34% {
+        transform: translate(0%, 2%) scaleX(0.80) scaleY(1.20);
+    }
+
+    46% {
+        transform: translate(0%, 0%) scaleX(1.20) scaleY(0.80);
+
+    }
+
+    58% {
+        transform: translate(0%, 0%) scaleX(0.95) scaleY(1.05);
+    }
+
+
+    80% {
+        transform: translate(0%, 0%) scaleX(1) scaleY(1);
+    }
+
+    100% {
+        transform: inherit;
+    }
+
+}

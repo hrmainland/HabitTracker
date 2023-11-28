@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#outer {
+    background-color: lightblue;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* .graph-svg {
+    max-height: 50px;
+} */
+
+.inner {
+    border: 1px solid black;
+    width: 300px;
+    max-height: 200px;
+}
