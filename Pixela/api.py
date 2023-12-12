@@ -223,3 +223,4 @@ def for_all_graphs(func):
 
 if __name__ == "__main__":
     pass
+    add_graph("Sleep", "sleep", 10, "blue")

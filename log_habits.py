@@ -3,13 +3,13 @@ import sys
 from datetime import date, timedelta
 # from Pixela.file_io import *
 
-UNIT_DICT = {"med": 30, "jrn": 10, "goal": 15, "web": 30}
+UNIT_DICT = {"med": 30, "jrn": 10, "sleep": 10, "web": 30}
 
 DAY_STRINGS = {"yest": -1, "yesterday": -1, "tod": 0, "today": 0}
 
 
 # example input
-# -2 med 3 run yesterday med read 2 tod run 
+# -2 med 3 run yesterday med read 2 tod run
 # This means
 # Two days ago: meditated 3 sessions, ran once
 # Yesterday: meditated and read once each
@@ -62,6 +62,12 @@ def parse_input(input, id_list):
     datapoints = []
     current_datapoint = None
 
+    if input[0] == "all":
+        for id in id_list:
+            this_datapoint = Datapoint(id, UNIT_DICT)
+            datapoints.append(this_datapoint)
+        return datapoints
+
     # if there's no day indicator we're talking about today
     day = date.today().strftime("%Y%m%d")
     for i, elem in enumerate(input):
@@ -113,7 +119,8 @@ def main():
     else:
         prompt_user(name_id_pairs)
         datapoint_code = input("Enter datapoints:\n").split(" ")
-    datapoints = parse_input(datapoint_code, list(name_id_pairs.keys()))
+    datapoints = parse_input(datapoint_code, list(
+        set(name_id_pairs.keys()).intersection(set(UNIT_DICT.keys()))))
 
     # for datapoint in datapoints:
     #     print(datapoint)

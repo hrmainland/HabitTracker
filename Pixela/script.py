@@ -1,4 +1,4 @@
 from api import *
-from file_io import *
-from helper import *
 
+delete_graph("job")
+delete_graph("read")
