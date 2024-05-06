@@ -3,7 +3,7 @@ import sys
 from datetime import date, timedelta
 # from Pixela.file_io import *
 
-UNIT_DICT = {"med": 30, "jrn": 10, "sleep": 10, "web": 30}
+UNIT_DICT = {"med": 30, "jrn": 10, "sleep": 10, "web": 30, "ex": 45}
 
 DAY_STRINGS = {"yest": -1, "yesterday": -1, "tod": 0, "today": 0}
 

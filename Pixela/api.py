@@ -80,7 +80,8 @@ def add_graph(name, id, unit, color, type="int"):
     color_code = convert_color(color)
     url = URL_BASE + f"/v1/users/{USERNAME}/graphs"
     headers = {'X-USER-TOKEN': f'{TOKEN}'}
-    data = f'{{"id":"{id}", "name":"{name}", "unit":"{unit}", "type":"int", "color":"{color_code}", "publishOptionalData":true}}'
+    data = f'{{"id":"{id}", "name":"{name}", "unit":"{
+        unit}", "type":"{type}", "color":"{color_code}", "publishOptionalData":true}}'
     response = requests.post(url, headers=headers, data=data)
     pass
     print(response.content)
@@ -92,6 +93,9 @@ def update_pixel(id, date, quantity):
     data = f'{{"quantity":"{quantity}"}}'
     response = requests.put(url, headers=headers, data=data)
     print(response.content)
+
+# https://docs.pixe.la/entry/put-graph
+# timezone = "Australia/Melbourne"
 
 
 def update_graph(id, **kwargs):
@@ -222,5 +226,4 @@ def for_all_graphs(func):
 
 
 if __name__ == "__main__":
-    pass
-    add_graph("Sleep", "sleep", 10, "blue")
+    add_graph("Applications", "app", 1, "purple")
